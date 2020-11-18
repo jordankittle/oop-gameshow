@@ -7,7 +7,10 @@
  		this.phrases = this.createPhrases();
  		this.activePhrase = null;
  	}
-
+ 	/**
+ 	 *Creates phrases
+ 	 *@return {array} An array of phrases
+ 	 */
  	createPhrases(){
  		const phraseList =  [
  			{phrase: 'The best of both worlds'},
@@ -20,5 +23,15 @@
  			phrase.phrase = phrase.phrase.toLowerCase();
  			return phrase;
  		} );
+ 	}
+
+ 	/**
+ 	 *Gets a random phrase from the phrases property
+ 	 *@return {Object} A phrase object
+ 	 */
+ 	getRandomPhrase(){
+ 		const phrase = new Phrase(this.phrases[Math.floor(Math.random() * this.phrases.length)].phrase);
+ 		return phrase;
+
  	}
  }
