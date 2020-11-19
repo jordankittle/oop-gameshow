@@ -11,3 +11,4 @@ Personalized Styles:
 6.) Changed the winning game over overlay color from #78CF82 to #12b031 for a bolder shade of green.
 7.) Added text-shadow: 3px 3px 5px #222, 3px 3px 100px #3af to main game title and text-shadow text-shadow: 3px 3px 5px #aaa to header.
 8.) Added text-shadow: 2px 2px 3px #222 to Game Over Message.
+9.) Added Goldman-Regular font for game Title for more of a game-like appearance.
