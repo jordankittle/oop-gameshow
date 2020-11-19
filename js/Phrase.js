@@ -14,13 +14,22 @@
  		const div = document.getElementById('phrase');
  		const ul = div.firstElementChild;
  		const letters = this.phrase.split('');
- 		for (let letter in letters){
+
+ 		letters.forEach((letter) => {
+ 			console.log(letter);
+ 		});
+
+ 		/*for (let letter in letters){
  			if(letters[letter] === ' '){
  				ul.innerHTML += `<li class="space"> </li>`;
  			} else {
  				ul.innerHTML += `<li class="hide letter ${letters[letter]}">${letters[letter]}</li>`;
  			}
- 		}
+ 		}*/
+ 		const openSpan = `<span class="word">`;
+ 		const closeSpan = `</span>`;
+ 		ul.innerHTML = openSpan + ul.innerHTML;
+ 		ul.innerHTML += closeSpan;
 
  	}
 

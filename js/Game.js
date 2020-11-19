@@ -64,7 +64,6 @@
  		});
  		const hearts = document.querySelectorAll('#scoreboard li');
  		hearts.forEach((heart) => {
- 			console.log(heart);
  			heart.innerHTML = `<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">`;
  		});
 
