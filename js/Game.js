@@ -45,7 +45,7 @@
  		startScreen.style.display = 'none';
  		const randomPhrase = this.getRandomPhrase();
  		this.activePhrase = randomPhrase;
- 		randomPhrase.addPhraseToDisplay();
+ 		this.activePhrase.addPhraseToDisplay();
  	}
 
  	/**
