@@ -70,7 +70,6 @@
  	}
 
 
-
  	/**
  	 *Handle the action of a button click in the keyboard
  	 *

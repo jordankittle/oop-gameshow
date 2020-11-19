@@ -16,20 +16,18 @@
  		const letters = this.phrase.split('');
 
  		letters.forEach((letter) => {
- 			console.log(letter);
- 		});
-
- 		/*for (let letter in letters){
- 			if(letters[letter] === ' '){
+ 			if(letter === ' '){
  				ul.innerHTML += `<li class="space"> </li>`;
  			} else {
- 				ul.innerHTML += `<li class="hide letter ${letters[letter]}">${letters[letter]}</li>`;
+ 				ul.innerHTML += `<li class="hide letter ${letter}">${letter}</li>`;
  			}
- 		}*/
- 		const openSpan = `<span class="word">`;
- 		const closeSpan = `</span>`;
- 		ul.innerHTML = openSpan + ul.innerHTML;
- 		ul.innerHTML += closeSpan;
+ 		});
+ 		ul.innerHTML = `<span class="word" style="display:inline-block">` + ul.innerHTML;
+ 		ul.innerHTML += `</span>`;
+ 		const replaceString = `</span><li class="space"> </li><span class="word" style="display:inline-block">`;
+ 		let ulHTML = ul.innerHTML;
+ 		ul.innerHTML = ulHTML.replace(/<li class="space"> <\/li>/g, replaceString);
+
 
  	}
 

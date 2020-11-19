@@ -18,7 +18,6 @@ document.getElementById('qwerty').addEventListener('click', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-	console.log(game?'true':'false');
 	if(game){
 		const letter = String.fromCharCode(e.keyCode).toLowerCase();
 		if(/[a-z]/.test(letter) ){
