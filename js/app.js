@@ -23,7 +23,7 @@ document.addEventListener('keyup', (e) => {
 		if(/[a-z]/.test(letter) ){
 			const buttons = document.querySelectorAll('#qwerty button');
 			buttons.forEach((button) => {
-				if (button.textContent === letter){
+				if (button.textContent === letter && !button.disabled){
 					game.handleInteraction(button);
 				}
 			});

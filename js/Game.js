@@ -79,7 +79,6 @@
  		if(this.activePhrase.checkLetter(letter) ){
  			button.disabled = true;
  			button.className = 'chosen';
- 			//button.classList.add('chosen');
  			this.activePhrase.showMatchedLetter(letter);
  			if(game.checkForWin() ){
  				this.gameOver(true);
@@ -87,7 +86,6 @@
  		} else {
  			button.disabled = true;
  			button.className = 'wrong';
- 			//button.classList.add('wrong');
  			this.removeLife();
  		}
  	}
