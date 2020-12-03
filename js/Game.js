@@ -126,7 +126,13 @@
  			startScreen.querySelector('h1').textContent = 'Winner!';
  			startScreen.classList.add('win');
  		} else {
- 			startScreen.querySelector('h1').textContent = 'Sorry, try again!';
+ 			startScreen.querySelector('h1').innerHTML = `
+ 				Sorry, try again!<br>
+ 				<span id="answer">Show answer</span> 
+ 			`;
+ 			document.getElementById('answer').addEventListener('click', () => {
+ 				document.getElementById('answer').textContent = `"${this.activePhrase.phrase}"`;
+ 			})
  			startScreen.classList.add('lose');
  		}
  		gameover = true;

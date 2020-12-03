@@ -60,7 +60,7 @@ class Data{
 			{phrase: 'Hung out to dry'},
 			{phrase: 'How do you like them apples'},
 			{phrase: 'If it aint broke dont fix it'},
-			{phrase: 'It aitn over till the fat lady sings'},
+			{phrase: 'It aint over till the fat lady sings'},
 			{phrase: 'I spy with my little eye'},
 			{phrase: 'In the nick of time'},
 			{phrase: 'Jump the gun'},

@@ -129,6 +129,14 @@ button {
   animation-duration: .5s;
 }
 
+#answer{
+  font-size: 25px;
+}
+
+#answer:hover {
+  cursor: pointer;
+}
+
 
 /* Keyboard */
 
