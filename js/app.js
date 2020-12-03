@@ -2,6 +2,7 @@
  * Project 4 - OOP Game App
  * app.js */
 var game;
+var gameover = true;
 document.getElementById('btn__reset').addEventListener('click', (e) => {
 	game = new Game();
 	game.startGame();
@@ -18,7 +19,7 @@ document.getElementById('qwerty').addEventListener('click', (e) => {
 });
 
 document.addEventListener('keyup', (e) => {
-	if(game){
+	if(game && gameover === false){
 		const letter = String.fromCharCode(e.keyCode).toLowerCase();
 		if(/[a-z]/.test(letter) ){
 			const buttons = document.querySelectorAll('#qwerty button');
@@ -28,5 +29,9 @@ document.addEventListener('keyup', (e) => {
 				}
 			});
 		}
+	}
+	if(e.key === "Enter" && gameover === true) {
+		game = new Game();
+		game.startGame();
 	}
 });

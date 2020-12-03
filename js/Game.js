@@ -12,14 +12,8 @@
  	 *@return {array} An array of phrases
  	 */
  	createPhrases(){
- 		const phraseList =  [
- 			{phrase: 'The best of both worlds'},
- 			{phrase: 'A perfect storm'},
- 			{phrase: 'Barking up the wrong tree'},
- 			{phrase: 'Every cloud has a silver lining'},
- 			{phrase: 'Hit the nail on the head'}
- 		];
- 		return phraseList.map( (phrase) => {
+ 		const phraseList = new Data();
+ 		return phraseList.list.map( (phrase) => {
  			phrase.phrase = phrase.phrase.toLowerCase();
  			return phrase;
  		} );
@@ -40,6 +34,7 @@
  	 *
  	 */
  	startGame(){
+ 		gameover = false;
  		this.resetGame();
  		const startScreen = document.getElementById('overlay');
  		startScreen.style.display = 'none';
@@ -134,6 +129,7 @@
  			startScreen.querySelector('h1').textContent = 'Sorry, try again!';
  			startScreen.classList.add('lose');
  		}
+ 		gameover = true;
 
  	}
  }
